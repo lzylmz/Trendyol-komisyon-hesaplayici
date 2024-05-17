@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.son.HelloController">
+   <children>
+      <Button fx:id="button" layoutX="218.0" layoutY="342.0" mnemonicParsing="false" onAction="#action" text="Kar-Zarar hesapla" />
+      <Label fx:id="label" layoutX="104.0" layoutY="99.0" text="Satis fiyati;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="label1" layoutX="75.0" layoutY="269.0" text="Hizmet bedeli;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="label2" layoutX="12.0" layoutY="166.0" text="Alirken verilen kdv orani;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="label3" layoutX="75.0" layoutY="234.0" text="Diger giderler;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="label4" layoutX="87.0" layoutY="305.0" text="Kargo fiyati;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="7.0" layoutY="202.0" prefHeight="20.0" prefWidth="161.0" text="Kardan verilen kdv orani;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Separator layoutX="339.0" layoutY="17.0" orientation="VERTICAL" prefHeight="594.0" prefWidth="2.0" style="-fx-background-color: gray;" />
+      <Label layoutX="411.0" layoutY="132.0" text="Komisyon Tutari;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="komisyonTutari" layoutX="518.0" layoutY="132.0" style="-fx-text-fill: red;" text="komisyon">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="366.0" layoutY="397.0" prefHeight="20.0" prefWidth="174.0" text="Kar yuzdesi (Alis Fiyatindan);">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="karYuzdesiAlis" layoutX="547.0" layoutY="397.0" style="-fx-text-fill: green;" text="karYuzdesiAlis">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="356.0" layoutY="373.0" prefHeight="20.0" prefWidth="204.0" style="-fx-font-weight: bold;" text="Kar yuzdesi (Satis Fiyatindan);">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="KarYuzdesiSatis" layoutX="556.0" layoutY="373.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="karYuzdesiSatis">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="357.0" layoutY="202.0" text="Kardan verilen KDV tutari;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="KdvTL" layoutX="524.0" layoutY="202.0" style="-fx-text-fill: red;" text="kdv">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="453.0" layoutY="345.0" style="-fx-font-weight: bold;" text="Net Kar;">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="netKar" layoutX="520.0" layoutY="345.0" prefHeight="20.0" prefWidth="67.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="net kar">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="357.0" layoutY="166.0" text="Alirken verilen KDV tutari;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="alisKdvTL" layoutX="522.0" layoutY="166.0" style="-fx-text-fill: red;" text="aliskdv">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="436.0" layoutY="304.0" text="Kargo bedeli;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="kargom" layoutX="525.0" layoutY="304.0" style="-fx-text-fill: red;" text="kargo">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="satisFiyati" layoutX="176.0" layoutY="96.0" />
+      <TextField fx:id="kargo" layoutX="176.0" layoutY="302.0" text="otomatik dolacaktir" />
+      <TextField fx:id="giderler" layoutX="176.0" layoutY="231.0" />
+      <TextField fx:id="alisKdvOrani" layoutX="176.0" layoutY="163.0" />
+      <TextField fx:id="hizmetBedeli" layoutX="176.0" layoutY="266.0" />
+      <TextField fx:id="satisKdvOrani" layoutX="176.0" layoutY="199.0" />
+      <Button fx:id="karHesabi" layoutX="196.0" layoutY="513.0" mnemonicParsing="false" onAction="#fiyatHesapla" text="Onerilen fiyat hesapla" />
+      <Label fx:id="onerilenFiyat" layoutX="200.0" layoutY="561.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="onerilen">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="104.0" layoutY="561.0" text="Onerilen fiyat;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="107.0" layoutY="437.0" text="Alis fiyati;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="475.0" text="Istenilen kar orani;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="istenilenKar" layoutX="176.0" layoutY="472.0" />
+      <Label layoutX="409.0" layoutY="66.0" style="-fx-font-weight: bold; -fx-text-fill: blue;" text="Maliyet tutari;">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="maliyet" layoutX="520.0" layoutY="66.0" style="-fx-font-weight: bold; -fx-text-fill: blue;" text="maliyet">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="444.0" layoutY="462.0" text="KDVsiz kar;">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="kdvsizKar" layoutX="520.0" layoutY="462.0" style="-fx-text-fill: green;" text="kdvsizkar">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="gelisFiyati" layoutX="176.0" layoutY="434.0" />
+      <Label layoutX="6.0" layoutY="132.0" text=" Trendyol komisyon orani;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="komisyonOrani" layoutX="176.0" layoutY="129.0" />
+      <Label layoutX="103.0" layoutY="65.0" text="Alis fiyati ;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="alisFiyati" layoutX="176.0" layoutY="63.0" />
+      <Label layoutX="53.0" layoutY="23.0" prefHeight="26.0" prefWidth="220.0" text="Komisyom Kar-Zarar Hesabi" textFill="#f41919">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Slider layoutX="5.0" layoutY="383.0" prefHeight="14.0" prefWidth="336.0" style="-fx-background-color: grey;" />
+      <Label layoutX="432.0" layoutY="234.0" text="Diger giderler;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="269.0" text="Hizmet bedeli;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="digerGiderler" layoutX="526.0" layoutY="235.0" style="-fx-text-fill: red;" text="giderlere">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="bedel" layoutX="524.0" layoutY="269.0" style="-fx-text-fill: red;" text="hizmerbedeli">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="516.0" text="KDVsiz Kar yuzdesi (Alis Fiyatindan);">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="488.0" text="KDVsiz Kar yuzdesi (Satis Fiyatindan);">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="kdvsizKarYuzdesiAlis" layoutX="595.0" layoutY="516.0" style="-fx-text-fill: green;" text="karyuzdesi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="kdvsizKarYuzdesiSatis" layoutX="595.0" layoutY="488.0" style="-fx-text-fill: green;" text="karyuzdesi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="oto" layoutX="64.0" layoutY="341.0" mnemonicParsing="false" onAction="#oto" prefHeight="26.0" prefWidth="110.0" text="otomatik doldur" />
+      <Separator layoutX="401.0" layoutY="329.0" prefHeight="14.0" prefWidth="204.0" />
+      <Separator layoutX="401.0" layoutY="430.0" prefHeight="14.0" prefWidth="204.0" />
+      <Separator layoutX="403.0" layoutY="98.0" prefHeight="14.0" prefWidth="204.0" />
+   </children>
+</AnchorPane>
